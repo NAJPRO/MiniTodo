@@ -1,73 +1,73 @@
-# React + TypeScript + Vite
+# Mini Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Une application de gestion de tâches simple et élégante construite avec React, Tailwind CSS et DaisyUI.
 
-Currently, two official plugins are available:
+## Fonctionnalités
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Ajouter de nouvelles tâches
+- Marquer les tâches comme terminées
+- Supprimer les tâches
+- Interface utilisateur responsive
+- Design moderne avec DaisyUI
 
-## React Compiler
+## Technologies utilisées
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** - Bibliothèque JavaScript pour l'interface utilisateur
+- **Tailwind CSS** - Framework CSS utilitaire
+- **DaisyUI** - Composants UI pour Tailwind CSS
+- **Lucide React** - Icônes pour React
+- **Vite** - Outil de build rapide
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clonez le repository :
+```bash
+git clone https://github.com/NAJPRO/MiniTodo.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Accédez au dossier du projet :
+```bash
+cd MiniTodo
 ```
+
+3. Installez les dépendances :
+```bash
+npm install
+```
+
+4. Lancez le serveur de développement :
+```bash
+npm run dev
+```
+
+5. Ouvrez votre navigateur à l'adresse `http://localhost:5173`
+
+## Scripts disponibles
+
+- `npm run dev` - Lance le serveur de développement
+- `npm run build` - Génère la version de production
+- `npm run preview` - Prévisualise la version de production
+- `npm run lint` - Vérifie le code avec ESLint
+
+## Structure du projet
+
+```
+src/
+├── components/     # Composants React
+├── hooks/         # Hooks personnalisés
+├── assets/        # Fichiers statiques
+├── App.jsx        # Composant principal
+└── main.jsx       # Point d'entrée
+```
+
+## Contribution
+
+Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou soumettre une pull request.
+
+## Licence
+
+Ce projet est sous licence MIT.
+
+## Auteur
+
+**NAJPRO** - [GitHub](https://github.com/NAJPRO)
